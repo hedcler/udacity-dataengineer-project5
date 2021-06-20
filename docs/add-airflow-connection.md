@@ -7,9 +7,11 @@ Here, we'll use Airflow's UI to configure your AWS credentials and connection to
   - If you'd prefer to run Airflow locally, open http://localhost:8080 in Google Chrome (other browsers occasionally have issues rendering the Airflow UI).
 
 2. Click on the Admin tab and select Connections.
+
   ![Admin Connections](./img/admin-connections.png)
 
 3. Under Connections, select Create.
+
   ![Create Connections](./img/create-connection.png)
 
 4. On the create connection page, enter the following values:
