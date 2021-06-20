@@ -7,10 +7,10 @@ Here, we'll use Airflow's UI to configure your AWS credentials and connection to
   - If you'd prefer to run Airflow locally, open http://localhost:8080 in Google Chrome (other browsers occasionally have issues rendering the Airflow UI).
 
 2. Click on the Admin tab and select Connections.
-  ![Admin Connections](./docs/img/admin-connections.png)
+  ![Admin Connections](./img/admin-connections.png)
 
 3. Under Connections, select Create.
-  ![Create Connections](./docs/img/create-connection.png)
+  ![Create Connections](./img/create-connection.png)
 
 4. On the create connection page, enter the following values:
 
@@ -21,7 +21,7 @@ Here, we'll use Airflow's UI to configure your AWS credentials and connection to
   
   Once you've entered these values, select **Save and Add Another**.
 
-  ![Connection AWS Credentials](./docs/img/connection-aws-credentials.png)
+  ![Connection AWS Credentials](./img/connection-aws-credentials.png)
 
 5. On the next create connection page, enter the following values:
 
@@ -35,9 +35,9 @@ Here, we'll use Airflow's UI to configure your AWS credentials and connection to
   
   Once you've entered these values, select Save.
 
-  ![Cluster Details](./docs/img/cluster-details.png)
+  ![Cluster Details](./img/cluster-details.png)
 
-  ![Connection Redshift](./docs/img/connection-redshift.png)
+  ![Connection Redshift](./img/connection-redshift.png)
 
   Awesome! You're now all configured to run Airflow with Redshift.
 
