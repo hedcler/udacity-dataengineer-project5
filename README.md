@@ -73,7 +73,7 @@ log_data/2018/11/2018-11-13-events.json
 
 And below is an example of what the data in a log file, 2018-11-12-events.json, looks like.
 
-![Log Data](./img/log-data.png)
+![Log Data](./docs/img/log-data.png)
 
 ## Data Quality
 To ensure the tables were loaded, a data quality checking is performed to count the total records each table has.
