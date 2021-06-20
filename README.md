@@ -11,7 +11,7 @@ This project will introduce the core concepts of Apache Airflow. To complete the
 
 **DAG representation**
 
-![DAG Representation](./img/example_dag.png)
+![DAG Representation](./img/example-dag.png)
 
 
 ### Step 1 - Configure the project dependencies
