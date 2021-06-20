@@ -11,11 +11,11 @@ This project will introduce the core concepts of Apache Airflow. To complete the
 
 **DAG Graph View**
 
-![DAG Graph View](./img/dag-graph-view.png)
+![DAG Graph View](./docs/img/dag-graph-view.png)
 
 **DAG Tree View**
 
-![DAG Tree View](./img/dag-tree-view.png)
+![DAG Tree View](./docs/img/dag-tree-view.png)
 
 
 ## Step 1 - Configure the project
@@ -37,6 +37,11 @@ This command will start the Apache Airflow, and it will be accessible on http://
 username: ayrflow
 password: ayrflow
 ```
+### Step 1.3 - Configure Airflow Connections
+
+[Click Here](./docs/add-airflow-connection.md) to see how configure Airflow Connections.
+
+
 ## Step 2 - Reading the data
 
 ### Song Dataset
