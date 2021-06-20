@@ -22,7 +22,7 @@ class LoadDimensionOperator(BaseOperator):
         redshift = PostgresHook(postgres_conn_id=self.conn_id)
         self.log.info(f"Loading dimension table {self.table} in Redshift")
         redshift.run(f"""
-            BEGIN
+            BEGIN;
             TRUNCATE TABLE {self.table};
             INSERT INTO {self.table} 
             {self.load_sql_stmt};

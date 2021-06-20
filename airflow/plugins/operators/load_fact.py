@@ -22,7 +22,7 @@ class LoadFactOperator(BaseOperator):
         redshift = PostgresHook(postgres_conn_id=self.conn_id)
         self.log.info(f"Loading fact table {self.table} in Redshift")
         redshift.run(f"""
-            BEGIN
+            BEGIN;
             INSERT INTO {self.table}
             {self.load_sql_stmt};
             COMMIT;
