@@ -2,29 +2,28 @@ from datetime import datetime, timedelta
 import os
 from airflow import DAG
 from airflow.operators.dummy_operator import DummyOperator
-from airflow.operators import (StageToRedshiftOperator, LoadFactOperator,
-                                LoadDimensionOperator, DataQualityOperator)
+from airflow.operators import (
+    StageToRedshiftOperator, 
+    LoadFactOperator,
+    LoadDimensionOperator, 
+    DataQualityOperator
+)
 from helpers import SqlQueries
 
 default_args = {
-    'owner': 'hedcler-morais',
-    'start_date': datetime(2020, 6, 20),
-}
-
-default_args = {
-    'owner': 'udacity',
+    'owner': 'hedcler',
     'depends_on_past': False,
     'retries': 3,
     'retry_delay': timedelta(minutes=5),
     'start_date': datetime(2019, 1, 12),
-    'email_on_retry': False
+    'email_on_retry': False,
+    'catchup': False
 }
 
 dag = DAG('sparkify_dag',
           default_args=default_args,
           description='Sparkify ETL (from S3 to Redshift) using Apache Airflow',
-          schedule_interval='0 * * * *',
-          catchup=False
+          schedule_interval='0 * * * *'
         )
 
 start_operator = DummyOperator(task_id='Begin_execution',  dag=dag)
