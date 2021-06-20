@@ -7,11 +7,11 @@ The source data resides in S3 and needs to be processed in Sparkify's data wareh
 
 As their data engineer, I was tasked tasked with building an ETL pipeline that extracts their data from S3, processes them using Airflow, and loads the data back into S3 as a set of dimensional tables. This will allow their analytics team to continue finding insights in what songs their users are listening to.
 
-## Step 1 - Configure the project
+### Step 1 - Configure the project dependencies
 It's good to start with airflow on docker to avoid too much environment challenges. 
 Install the [Docker](https://docs.docker.com/get-docker/) and [Docker-Compose](https://docs.docker.com/compose/install/) on your host.
 
-## Step 2 - Run Apache Airflow on Docker
+### Step 2 - Run Apache Airflow on Docker
 With Docker installed and running, and Docker-Composer installed, run the follow command on your terminal:
 
 ```sh
