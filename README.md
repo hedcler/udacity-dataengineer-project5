@@ -10,9 +10,11 @@ As their data engineer, I was tasked tasked with building an ETL pipeline that e
 This project will introduce the core concepts of Apache Airflow. To complete the project, we need to create our own custom operators to perform tasks such as staging the data, filling the data warehouse, and running checks on the data as the final step.
 
 **DAG Graph View**
+
 ![DAG Graph View](./img/dag-graph-view.png)
 
 **DAG Tree View**
+
 ![DAG Tree View](./img/dag-tree-view.png)
 
 
