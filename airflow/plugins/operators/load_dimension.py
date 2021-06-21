@@ -25,6 +25,7 @@ class LoadDimensionOperator(BaseOperator):
         self.log.info(f"Loading dimension table {self.table} in Redshift")
         
         if self.append_data == False:
+            self.log.info(f"Deleting all data of table {self.table} in Redshift")
             redshift.run(f"""
                 BEGIN;
                 TRUNCATE TABLE {self.table};
@@ -34,6 +35,7 @@ class LoadDimensionOperator(BaseOperator):
         redshift.run(f"""
             BEGIN;
             INSERT INTO {self.table} 
-            {self.load_sql_stmt};
+            {self.load_sql_stmt}
+            ON CONFLICT DO NOTHING;
             COMMIT;
         """)
