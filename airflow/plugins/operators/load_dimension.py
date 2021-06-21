@@ -35,7 +35,6 @@ class LoadDimensionOperator(BaseOperator):
         redshift.run(f"""
             BEGIN;
             INSERT INTO {self.table} 
-            {self.load_sql_stmt}
-            ON CONFLICT DO NOTHING;
+            {self.load_sql_stmt};
             COMMIT;
         """)
