@@ -77,3 +77,16 @@ And below is an example of what the data in a log file, 2018-11-12-events.json, 
 
 ## Data Quality
 To ensure the tables were loaded, a data quality checking is performed to count the total records each table has.
+
+## IAC - Infrastructure As Code [OPTIONAL]
+
+If you want to automatize Redshift Cluster creation:
+
+1. Rename the `redshift.cfg.example` to `redshift.cfg`
+2. Execute the file `iac.py`, that will create infrastructure and update configurations on file
+3. Execute the file `create_tables.py` that will import queris from `sql_queries.py`
+4. Configure your Apache Airflow Connections with data present on section `CLUSTER` of file `redshift.cfg` .
+
+To execute `iac.py` you'll need to provide `key`, `secret`, and `region` on `[AWS]` section of file `redshift.cfg`.
+
+Now you can run your DAG on Apache Airflow.

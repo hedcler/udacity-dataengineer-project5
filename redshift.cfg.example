@@ -1,0 +1,25 @@
+[AWS]
+key = <YOUR_AWS_ACCESS_KEY_HERE>
+secret = <YOUR_AWS_SECRET_KEY_HERE>
+region = us-west-2
+
+[CLUSTER_CONFIG]
+redshift_cluster_type=multi-node
+redshift_num_nodes=2
+redshift_node_type=dc2.large
+redshift_iam_role_name=redshiftRole
+redshift_cluster_identifier=redshiftCluster
+redshift_db=sparkfy
+redshift_db_user=sparkfy
+redshift_db_password=Passw0rd
+redshift_port=5432
+
+[CLUSTER]
+host = 
+db_name = 
+db_user = 
+db_password = 
+db_port = 
+
+[IAM_ROLE]
+arn = 
