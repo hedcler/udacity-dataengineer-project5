@@ -90,3 +90,7 @@ If you want to automatize Redshift Cluster creation:
 To execute `iac.py` you'll need to provide `key`, `secret`, and `region` on `[AWS]` section of file `redshift.cfg`.
 
 Now you can run your DAG on Apache Airflow.
+
+## Expected result
+
+![Expected Result](./docs/img/expected-output.png)
