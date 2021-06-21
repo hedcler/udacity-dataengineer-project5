@@ -20,7 +20,7 @@ class StageToRedshiftOperator(BaseOperator):
                  *args, **kwargs):
 
         super(StageToRedshiftOperator, self).__init__(*args, **kwargs)
-        self.onn_id = conn_id
+        self.conn_id = conn_id
         self.aws_credentials_id = aws_credentials_id
         self.table = table
         self.s3_bucket = s3_bucket
@@ -37,7 +37,7 @@ class StageToRedshiftOperator(BaseOperator):
 
         self.log.info("Copying data from S3 to Redshift")
         rendered_key = self.s3_key.format(**context)
-        s3_path = "s3a://{}/{}".format(self.s3_bucket, rendered_key)
+        s3_path = "s3://{}/{}".format(self.s3_bucket, rendered_key)
 
         if self.file_type == "json":
             formatted_sql = f"""
